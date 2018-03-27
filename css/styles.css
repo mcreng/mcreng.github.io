@@ -52,7 +52,7 @@ main {
 }
 
 .header {
-	font-family: 'IBM Plex Serif', sans-serif;
+	font-family: 'IBM Plex Serif', serif;
 	font-size: 3.75em;
 	letter-spacing: -0.05em;
 	/* font-weight: 600; */
@@ -84,6 +84,10 @@ main {
 	text-decoration: none;
 }
 
+.icons a:hover {
+	color: #666ad1;
+}
+
 #section2 {
 	background: url('../img/bg1.jpg');
 	position: relative;
@@ -112,14 +116,14 @@ main {
 
 .align-left-bottom {
 	text-align: left;
-	padding: 1.75em;
-	padding-top: 20em;
+	padding: 5%;
+	padding-top: 25%;
 }
 
 .align-right-bottom {
 	text-align: right;
-	padding: 1.75em;
-	padding-top: 20em;
+	padding: 5%;
+	padding-top: 25%;
 }
 
 .hint {
@@ -132,10 +136,28 @@ main {
 
 .align-right {
 	text-align: right;
-	padding-right: 4rem;
 }
 
 .align-left {
 	text-align: left;
-	padding-left: 4rem;
 }
+
+.proj-header {
+	font-family: 'Crimson Text', serif;
+	font-size: 3em;
+	letter-spacing: -0.03em;
+}
+
+.flex-1 > * {
+	flex: 1;
+}
+
+.award-list {
+	text-align: left;
+}
+
+.subcontent p {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+

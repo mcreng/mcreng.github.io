@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Montserrat|IBM+Plex+Serif|Nunito|Quicksand|Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Montserrat|IBM+Plex+Serif|Nunito|Quicksand|Rubik|Crimson+Text" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="stylesheet" href="css/reset.css">
@@ -50,11 +50,12 @@
           }
         },
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+          console.log(slideIndex);
           if (index == 2) {
             $('#dp-second').find('a.active').removeClass('active');
             $('#dp-second').find('a').eq(slideIndex).addClass('active');
-            console.log(slideIndex);
-            // still buggy (?)
+
+            // still buggy: going into slides does not update navbar
           }
         },
       });
@@ -85,8 +86,8 @@
                 <b class="caret"></b>
               </a>
               <div id="dp-second" class="dropdown-menu" aria-labelledby="proj-robotics">
-                <a class="dropdown-item" href="#robotics">Introduction</a>
-                <a class="dropdown-item" href="#robotics/1">Project 1</a>
+                <a class="dropdown-item" href="#robotics">Intro</a>
+                <a class="dropdown-item" href="#robotics/1">Robot Design Contest</a>
                 <a class="dropdown-item" href="#">3</a>
                 <a class="dropdown-item" href="#">4</a>
               </div>
@@ -107,33 +108,70 @@
     <div id="fullpage">
       <div class="section" id="section0">
         <div class="intro align-left-bottom">
-          <div class="header"><p>TSE Ho Nam, Peter</p></div>
-          <div class="content"><p>HKUST Computer Science and Mathematics Year 2</p></div>
-          <div class="subcontent"><p>Welcome to my project listing website.</p></div>
-          <div class="hint"><p>⭣ See my projects below ⭣</p></div>
+          <div class="header">
+            <p>TSE Ho Nam, Peter</p>
+          </div>
+          <div class="content">
+            <p>HKUST Computer Science and Mathematics Year 2</p>
+          </div>
+          <div class="subcontent">
+            <p>Welcome to my project listing website.</p>
+          </div>
+          <div class="hint">
+            <p>⭣ See my projects below ⭣</p>
+          </div>
         </div>
       </div>
       <div class="section" id="section-robotics">
         <div class="slide" id="section-robotics-intro">
           <div class="intro align-right-bottom">
-            <div class="header"><p>HKUST Robotics Team</p></div>
-            <div class="content"><p>Union of software, hardware and mechanical engineering.</p></div>
+            <div class="header">
+              <p>HKUST Robotics Team</p>
+            </div>
+            <div class="content">
+              <p>Union of software, hardware and mechanical engineering.</p>
+            </div>
           </div>
         </div>
 
         <div class="slide" id="section-robotics-proj1">
           <div class="proj-details">
-            <div class="header align-left"><p>Robot Design Contest</p></div>
-            <div class="content align-left"><p>A competition involving designs of 2 robots.</p></div>
-            <div class="subcontent">
-              <br>
-              <div class="container">
+
+            <div class="container">
+              <div class="proj-header align-left">
+                <p>Robot Design Contest</p>
+              </div>
+              <div class="content align-left mb-4">
+                <p>A competition involving designs of 2 robots.</p>
+              </div>
+              <div class="subcontent">
                 <div class="row">
-                  <div class="col-md-5">
-                    <p>Technologies involved:</p>
-                    <div class="icons d-flex flex-row align-items-center justify-content-center">
-                      <i class="devicon-c-plain-wordmark"></i>
-                      <span>STM32</span>
+                  <div class="col-md-5 d-flex flex-column flex-1">
+                    <div>
+                      <p>Technologies involved</p>
+                      <div class="icons d-flex flex-row align-items-center justify-content-center">
+                        <i class="devicon-c-plain-wordmark"></i>
+                        <span>STM32</span>
+                      </div>
+                    </div>
+                    <div>
+                      <p>References</p>
+                      <div class="icons">
+                        <a href="/files/rules2017.pdf" target="_blank"  data-toggle="tooltip" title="Game Rule">
+                          <i class="fas fa-file-pdf"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <p>Awards</p>
+                        <ul style="list-style-type:disc">
+                          <li>
+                            Overall Championship
+                          </li>
+                          <li>
+                            Best Engineering Design Award
+                          </li>
+                        </ul>
                     </div>
                   </div>
                   <div class="col-md-7">
@@ -147,6 +185,59 @@
             </div>
           </div>
         </div>
+
+        <div class="slide" id="section-robotics-proj2">
+          <div class="proj-details">
+
+            <div class="container">
+              <div class="proj-header align-right">
+                <p>NXP Intelligence Car Racing</p>
+              </div>
+              <div class="content align-right mb-4">
+                <p>An autonomous car racing competition.</p>
+              </div>
+              <div class="subcontent">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="embed-responsive embed-responsive-16by9">
+                          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XNHxQgQYgy0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                      </div>  
+                  <div class="col-md-5 d-flex flex-column flex-1">
+                    <div>
+                      <p>Technologies involved</p>
+                      <div class="icons d-flex flex-row align-items-center justify-content-center">
+                        <i class="devicon-cplusplus-plain-wordmark"></i>
+                        <span>NXP</span>
+                      </div>
+                    </div>
+                    <div>
+                      <p>References</p>
+                      <div class="icons">
+                        <a href="/files/nxp2017.pdf" target="_blank" data-toggle="tooltip" title="NXP Cup Game Rule">
+                          <i class="fas fa-file-pdf"></i>
+                        </a>
+                        <a href="https://github.com/hkust-smartcar/chasing17" target="_blank" data-toggle="tooltip" title="GitHub Project Page">
+                          <i class="devicon-github-plain-wordmark"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <p>Awards</p>
+                        <ul style="list-style-type:disc">
+                          <li>
+                            Chasing Group 3rd Class Honour
+                          </li>
+                        </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
       </div>
       <div class="section" id="section2">
