@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>mcreng</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Montserrat|IBM+Plex+Serif|Nunito|Quicksand|Rubik" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/jquery.fullPage.css" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="js/jquery.fullPage.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#fullpage').fullpage({
+        anchors: ['firstPage', 'robotics', '3rdPage', 'contact'],
+        sectionsColor: ['#E8EAF6', '#E8EAF6', '#E8EAF6', '#E8EAF6'],
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+        onLeave: function (index, nextIndex, direction) {
+          $('#navbar').find('li.active').removeClass('active');
+          if (nextIndex > 1) {
+            $("#navbar").addClass("navbar-shrink");
+            $('#navbar').find('li').eq(nextIndex - 2).addClass('active');
+          } else {
+            $("#navbar").removeClass("navbar-shrink");
+          }
+          if (nextIndex != 2) {
+            $('#dp-second').find('a.active').removeClass('active');
+          }
+        },
+        onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
+          if (index == 2) {
+            $('#dp-second').find('a.active').removeClass('active');
+            $('#dp-second').find('a').eq(nextSlideIndex).addClass('active');
+          }
+        },
+        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+          if (index == 2) {
+            $('#dp-second').find('a.active').removeClass('active');
+            $('#dp-second').find('a').eq(slideIndex).addClass('active');
+            console.log(slideIndex);
+            // still buggy (?)
+          }
+        },
+      });
+
+      $('.dropdown-item').on('click', function (e) {
+        $(".dropdown-menu").find('a.active').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#firstPage">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="proj-robotics" href="#robotics" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Robotics
+                <b class="caret"></b>
+              </a>
+              <div id="dp-second" class="dropdown-menu" aria-labelledby="proj-robotics">
+                <a class="dropdown-item" href="#robotics">Introduction</a>
+                <a class="dropdown-item" href="#robotics/1">Project 1</a>
+                <a class="dropdown-item" href="#">3</a>
+                <a class="dropdown-item" href="#">4</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#3rdPage">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- https://fontawesome.com/icons?d=gallery&s=brands -->
+    <!-- http://konpa.github.io/devicon/ -->
+    <div id="fullpage">
+      <div class="section" id="section0">
+        <div class="intro align-left-bottom">
+          <div class="header"><p>TSE Ho Nam, Peter</p></div>
+          <div class="content"><p>HKUST Computer Science and Mathematics Year 2</p></div>
+          <div class="subcontent"><p>Welcome to my project listing website.</p></div>
+          <div class="hint"><p>⭣ See my projects below ⭣</p></div>
+        </div>
+      </div>
+      <div class="section" id="section-robotics">
+        <div class="slide" id="section-robotics-intro">
+          <div class="intro align-right-bottom">
+            <div class="header"><p>HKUST Robotics Team</p></div>
+            <div class="content"><p>Union of software, hardware and mechanical engineering.</p></div>
+          </div>
+        </div>
+
+        <div class="slide" id="section-robotics-proj1">
+          <div class="proj-details">
+            <div class="header align-left"><p>Robot Design Contest</p></div>
+            <div class="content align-left"><p>A competition involving designs of 2 robots.</p></div>
+            <div class="subcontent">
+              <br>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-5">
+                    <p>Technologies involved:</p>
+                    <div class="icons d-flex flex-row align-items-center justify-content-center">
+                      <i class="devicon-c-plain-wordmark"></i>
+                      <span>STM32</span>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JIpl5VEyRUY?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="section" id="section2">
+        Hello!
+      </div>
+      <div class="section" id="section-contact">
+        <div class="icons">
+          <a href="http://www.fb.me/mcreng" target="_blank">
+            <i class="devicon-facebook-plain"></i>
+          </a>
+          <a href="http://www.github.com/mcreng" target="_blank">
+            <i class="devicon-github-plain-wordmark"></i>
+          </a>
+          <a href="mailto:hntse@connect.ust.hk" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
