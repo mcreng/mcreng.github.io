@@ -32,8 +32,8 @@
 	font-size: 3em;
 }
 
-.icons img {
-	height: 6em;
+.icons img, svg path {
+	height: 1em;
 }
 
 /* Custom Styles */
@@ -70,7 +70,7 @@ main {
 	font-family: 'Quicksand', sans-serif;
 }
 
-.icons i, .icon > span {
+.icons i, .icons span, .icons img {
 	padding: 0 1rem;
 }
 
@@ -129,9 +129,14 @@ main {
 .hint {
 	text-align: center;
 	opacity: 0.7;
-	padding-top: 5em;
+	/* padding-top: 5em; */
+	padding: 1em;
 	text-transform: uppercase;
 	font-family: 'Nunito', sans-serif;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 }
 
 .align-right {
@@ -156,7 +161,7 @@ main {
 	text-align: left;
 }
 
-.subcontent p {
+.subcontent > div  p {
 	font-weight: bold;
 	text-transform: uppercase;
 }

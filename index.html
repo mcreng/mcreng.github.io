@@ -10,7 +10,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Montserrat|IBM+Plex+Serif|Nunito|Quicksand|Rubik|Crimson+Text" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Montserrat|IBM+Plex+Serif|Nunito|Quicksand|Rubik|Crimson+Text"
+    rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="stylesheet" href="css/reset.css">
@@ -24,6 +25,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="js/jquery.fullPage.js"></script>
+  <script src="js/pdfobject.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $('#fullpage').fullpage({
@@ -87,9 +89,11 @@
               </a>
               <div id="dp-second" class="dropdown-menu" aria-labelledby="proj-robotics">
                 <a class="dropdown-item" href="#robotics">Intro</a>
-                <a class="dropdown-item" href="#robotics/1">Robot Design Contest</a>
-                <a class="dropdown-item" href="#">3</a>
-                <a class="dropdown-item" href="#">4</a>
+                <a class="dropdown-item" href="#robotics/rdc">Robot Design Contest</a>
+                <a class="dropdown-item" href="#robotics/nxp">NXP Cup</a>
+                <a class="dropdown-item" href="#robotics/kea">KEA Development</a>
+                <a class="dropdown-item" href="#robotics/nfc">Credit System</a>
+                <a class="dropdown-item" href="#robotics/tuck">Payment System</a>
               </div>
             </li>
             <li class="nav-item">
@@ -134,7 +138,7 @@
           </div>
         </div>
 
-        <div class="slide" id="section-robotics-proj1">
+        <div class="slide" id="section-robotics-proj-rdc" data-anchor="rdc">
           <div class="proj-details">
 
             <div class="container">
@@ -146,32 +150,35 @@
               </div>
               <div class="subcontent">
                 <div class="row">
-                  <div class="col-md-5 d-flex flex-column flex-1">
+                  <div class="col-md-5 d-flex flex-column justify-content-between">
                     <div>
                       <p>Technologies involved</p>
-                      <div class="icons d-flex flex-row align-items-center justify-content-center">
-                        <i class="devicon-c-plain-wordmark"></i>
-                        <span>STM32</span>
+                      <div class="icons text-center">
+                        <i class="align-middle devicon-c-plain-wordmark"></i>
+                        <a class="align-middle" href="http://www.st.com/en/microcontrollers/stm32f1-series.html?querycriteria=productId=SS1031" data-toggle="tooltip"
+                          title="Details of STM32F1 MCUs">
+                          <span>STM32</span>
+                        </a>
                       </div>
                     </div>
                     <div>
                       <p>References</p>
                       <div class="icons">
-                        <a href="/files/rules2017.pdf" target="_blank"  data-toggle="tooltip" title="Game Rule">
+                        <a href="/files/rules2017.pdf" target="_blank" data-toggle="tooltip" title="Game Rule">
                           <i class="fas fa-file-pdf"></i>
                         </a>
                       </div>
                     </div>
                     <div>
                       <p>Awards</p>
-                        <ul style="list-style-type:disc">
-                          <li>
-                            Overall Championship
-                          </li>
-                          <li>
-                            Best Engineering Design Award
-                          </li>
-                        </ul>
+                      <ul>
+                        <li>
+                          Overall Championship
+                        </li>
+                        <li>
+                          Best Engineering Design Award
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <div class="col-md-7">
@@ -186,29 +193,35 @@
           </div>
         </div>
 
-        <div class="slide" id="section-robotics-proj2">
+        <div class="slide" id="section-robotics-proj-nxp" data-anchor="nxp">
           <div class="proj-details">
 
             <div class="container">
               <div class="proj-header align-right">
-                <p>NXP Intelligence Car Racing</p>
+                <p>NXP Cup Intelligence Car Racing</p>
               </div>
               <div class="content align-right mb-4">
                 <p>An autonomous car racing competition.</p>
               </div>
               <div class="subcontent">
                 <div class="row">
-                    <div class="col-md-7">
-                        <div class="embed-responsive embed-responsive-16by9">
-                          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XNHxQgQYgy0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </div>
-                      </div>  
-                  <div class="col-md-5 d-flex flex-column flex-1">
+                  <div class="col-md-7">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XNHxQgQYgy0?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="col-md-5 d-flex flex-column justify-content-between">
                     <div>
                       <p>Technologies involved</p>
-                      <div class="icons d-flex flex-row align-items-center justify-content-center">
-                        <i class="devicon-cplusplus-plain-wordmark"></i>
-                        <span>NXP</span>
+                      <div class="icons text-center">
+                        <i class="devicon-cplusplus-plain-wordmark align-middle"></i>
+                        <a class="align-middle" href="https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/k-seriesperformancem4/k6x-ethernet/kinetis-k60-61-120150-mhz-mixed-signal-integration-anti-tamper-microcontrollers-based-on-arm-cortex-m4-core:K60_120"
+                          target="_blank" data-toggle="tooltip" title="Details of NXP K60 MCUs">
+                          <img src="/img/nxp.png">
+                        </a>
+                        <img class="align-middle" src="/img/solidworks.png">
+                        <img class="align-middle" src="/img/altium.png">
                       </div>
                     </div>
                     <div>
@@ -224,11 +237,11 @@
                     </div>
                     <div>
                       <p>Awards</p>
-                        <ul style="list-style-type:disc">
-                          <li>
-                            Chasing Group 3rd Class Honour
-                          </li>
-                        </ul>
+                      <ul>
+                        <li>
+                          Chasing Group 3rd Class Honour
+                        </li>
+                      </ul>
                     </div>
                   </div>
 
@@ -238,6 +251,101 @@
           </div>
         </div>
 
+
+        <div class="slide" id="section-robotics-proj-kea" data-anchor="kea">
+          <div class="proj-details">
+
+            <div class="container">
+              <div class="proj-header align-left">
+                <p>KEA MCU Development</p>
+              </div>
+              <div class="content align-left mb-4">
+                <p>Library development on NXP KEA MCUs.</p>
+              </div>
+              <div class="subcontent">
+                <div class="row">
+                  <div class="col-md-5 d-flex flex-column flex-1">
+                    <div>
+                      <p>Technologies involved</p>
+                      <div class="icons text-center">
+                        <i class="align-middle devicon-cplusplus-plain-wordmark"></i>
+                        <a class="align-middle" href="https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/ea-series-automotive-m0-plus/ultra-reliable-kea-automotive-microcontrollers-mcus-based-on-arm-cortex-m0-plus-core:KEA"
+                          target="_blank" data-toggle="tooltip" title="Details of NXP K60 MCUs">
+                          <span>NXP</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <p>References</p>
+                      <div class="icons">
+                        <a href="https://github.com/hkust-smartcar/kea128" target="_blank" data-toggle="tooltip" title="GitHub Project Page">
+                          <i class="devicon-github-plain-wordmark"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <!-- <div class="embed-responsive embed-responsive-16by9">
+                          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XNHxQgQYgy0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div> -->
+                    <iframe src="/files/KEA128RM.pdf" width="560" height="315">
+                      This browser does not support PDFs. Please download the PDF to view it:
+                      <a href="/files/KEA128RM.pdf">Download PDF</a>
+                    </iframe>
+
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="slide" id="section-robotics-proj-nfc" data-anchor="nfc">
+          <div class="proj-details">
+
+            <div class="container">
+              <div class="proj-header align-right">
+                <p>HKUST Underwater Robot Competition NFC Credit System</p>
+              </div>
+              <div class="content align-right mb-4">
+                <p>A window application for competition credit system.</p>
+              </div>
+              <div class="subcontent">
+                <div class="row">
+                  <div class="col-md-7">
+                    <img src="/img/underwater-nfc-ui.PNG" style="height: 15rem; ">
+                  </div>
+
+                  <div class="col-md-5 d-flex flex-column flex-1">
+                    <div>
+                      <p>Technologies involved</p>
+                      <div class="icons text-center">
+                        <i class="align-middle devicon-csharp-plain-wordmark"></i>
+                        <img style="height: 2.5em;" src="/img/nfc.png">
+                      </div>
+                    </div>
+                    <div>
+                      <p>References</p>
+                      <div class="icons">
+                        <a href="https://www.facebook.com/hkustuwrobot/" target="_blank" data-toggle="tooltip" title="Facebook Page of Competition">
+                          <i class="devicon-facebook-plain"></i>
+                        </a>
+                        <a href="https://github.com/LeeChunHei/Underwater_Robot_NFC" target="_blank" data-toggle="tooltip" title="GitHub Project Page">
+                          <i class="devicon-github-plain-wordmark"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
       <div class="section" id="section2">
