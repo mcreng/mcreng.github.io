@@ -72,6 +72,7 @@ main {
 
 .icons i, .icons span, .icons img {
 	padding: 0 1rem;
+	fill: #303F9F;
 }
 
 .icons a {
@@ -91,9 +92,9 @@ main {
 #section2 {
 	background: url('../img/bg1.jpg');
 	position: relative;
-	box-shadow: inset 0 0 0 1000px rgba(48, 63, 159, 0.7);
+	box-shadow: inset 0 0 0 1000px rgba(232, 234, 246, 0.7);
 	margin: 0;
-	color: #E8EAF6;
+	color: rgba(48, 63, 159, 1);
 }
 
 #navbar {
@@ -166,3 +167,19 @@ main {
 	text-transform: uppercase;
 }
 
+.carousel-indicators li {
+	background-color: #303f9f80;
+}
+.carousel-indicators .active {
+    background-color: #303F9F;
+}
+
+.carousel-control-next-icon {
+    background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    fill: '#303F9F';
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+	fill: '#303F9F';
+}
