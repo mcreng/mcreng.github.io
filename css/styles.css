@@ -6,7 +6,7 @@
 
 @media (min-width: 576px) {
 	html {
-		font-size: 14px;
+		font-size: 12px;
 	}
 }
 
@@ -55,6 +55,8 @@ main {
 	font-family: 'IBM Plex Serif', serif;
 	font-size: 3.75em;
 	letter-spacing: -0.05em;
+	line-height: 100%;
+	padding-bottom: .3em;
 	/* font-weight: 600; */
 }
 
@@ -71,7 +73,7 @@ main {
 }
 
 .icons i, .icons span, .icons img {
-	padding: 0 1rem;
+	padding: 0 .5rem;
 	fill: #303F9F;
 }
 
@@ -150,6 +152,8 @@ main {
 	font-family: 'Crimson Text', serif;
 	font-size: 3em;
 	letter-spacing: -0.03em;
+	line-height: 100%;
+	/* padding-bottom: .3em; */
 }
 
 .flex-1 > * {
