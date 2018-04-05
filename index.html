@@ -29,7 +29,7 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $('#fullpage').fullpage({
-        anchors: ['home', 'robotics', '3rdPage', 'contact'],
+        anchors: ['home', 'robotics', 'procal', '3rdPage', 'contact'],
         sectionsColor: ['#E8EAF6', '#E8EAF6', '#E8EAF6', '#E8EAF6'],
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
@@ -96,6 +96,17 @@
                 <a class="dropdown-item" href="#robotics/tuck">Payment System</a>
               </div>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="proj-robotics" href="#robotics" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  Procal
+                  <b class="caret"></b>
+                </a>
+                <div id="dp-second" class="dropdown-menu" aria-labelledby="proj-robotics">
+                  <a class="dropdown-item" href="#procal">Intro</a>
+                  <a class="dropdown-item" href="#procal/mad">Competition</a>
+                </div>
+              </li>
             <li class="nav-item">
               <a class="nav-link" href="#3rdPage">Link</a>
             </li>
@@ -111,29 +122,36 @@
     <!-- http://konpa.github.io/devicon/ -->
     <div id="fullpage">
       <div class="section" id="section0">
-        <div class="intro align-left-bottom">
-          <div class="header">
-            <p>TSE Ho Nam, Peter</p>
-          </div>
-          <div class="content">
-            <p>HKUST Computer Science and Mathematics Year 2</p>
-          </div>
-          <div class="subcontent">
-            <p>Welcome to my project listing website.</p>
-          </div>
-          <div class="hint">
-            <p>⭣ See my projects below ⭣</p>
+        <div class="intro align-left-bottom d-flex flex-column justify-content-end" style="height: 100%;">
+          <div>
+            <div class="header">
+              <p>TSE Ho Nam, Peter</p>
+            </div>
+            <div class="content">
+              <p>HKUST Computer Science and Mathematics Year 2</p>
+            </div>
+            <div class="subcontent">
+              <p>Welcome to my project listing website.</p>
+              <p>Hover on icons to see more.</p>
+            </div>
+            <div class="hint">
+              <p>⭣ See my projects below ⭣</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="section" id="section-robotics">
         <div class="fp-slide" id="section-robotics-intro">
-          <div class="intro align-right-bottom">
-            <div class="header">
-              <p>HKUST Robotics Team</p>
-            </div>
-            <div class="content">
-              <p>Union of software, hardware and mechanical engineering.</p>
+          <div class="intro align-right-bottom d-flex flex-column justify-content-end" style="height: 100%;">
+            <div>
+
+              <div class="header">
+
+                <p>HKUST Robotics Team</p>
+              </div>
+              <div class="content">
+                <p>Union of software, hardware and mechanical engineering.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -154,10 +172,10 @@
                     <div>
                       <p>Technologies involved</p>
                       <div class="icons text-center">
-                        <i class="align-middle devicon-c-plain-wordmark"></i>
+                        <i data-toggle="tooltip" title="C" class="align-middle devicon-c-plain-wordmark"></i>
                         <a class="align-middle" target="_blank" href="http://www.st.com/en/microcontrollers/stm32f1-series.html?querycriteria=productId=SS1031"
                           data-toggle="tooltip" title="Details of STM32F1 MCUs">
-                          <span>STM32</span>
+                          <img style="height: 3em;" class="align-middle" src="/img/stm32.svg">
                         </a>
                       </div>
                     </div>
@@ -215,13 +233,13 @@
                     <div>
                       <p>Technologies involved</p>
                       <div class="icons text-center">
-                        <i class="devicon-cplusplus-plain-wordmark align-middle"></i>
+                        <i data-toggle="tooltip" title="C++" class="devicon-cplusplus-plain-wordmark align-middle"></i>
                         <a class="align-middle" href="https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/k-seriesperformancem4/k6x-ethernet/kinetis-k60-61-120150-mhz-mixed-signal-integration-anti-tamper-microcontrollers-based-on-arm-cortex-m4-core:K60_120"
                           target="_blank" data-toggle="tooltip" title="Details of NXP K60 MCUs">
                           <img style="height: 2.5em;" src="/img/nxp.svg">
                         </a>
-                        <img style="height: 2.5em;" class="align-middle" src="/img/solidworks.svg">
-                        <img style="height: 2.5em;" class="align-middle" src="/img/altium.svg">
+                        <img style="height: 2.5em;" class="align-middle" data-toggle="tooltip" title="Solidworks" src="/img/solidworks.svg">
+                        <img style="height: 2.5em;" class="align-middle" data-toggle="tooltip" title="Altium Designer" src="/img/altium.svg">
                       </div>
                     </div>
                     <div>
@@ -268,7 +286,7 @@
                     <div>
                       <p>Technologies involved</p>
                       <div class="icons text-center">
-                        <i class="align-middle devicon-cplusplus-plain-wordmark"></i>
+                        <i data-toggle="tooltip" title="C++" class="align-middle devicon-cplusplus-plain-wordmark"></i>
                         <a class="align-middle" href="https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/ea-series-automotive-m0-plus/ultra-reliable-kea-automotive-microcontrollers-mcus-based-on-arm-cortex-m0-plus-core:KEA"
                           target="_blank" data-toggle="tooltip" title="Details of NXP K60 MCUs">
                           <img style="height: 2.5em;" src="/img/nxp.svg">
@@ -316,15 +334,15 @@
               <div class="subcontent">
                 <div class="row">
                   <div class="col-md-7">
-                    <img src="/img/underwater-nfc-ui.PNG" style="height: 15rem; ">
+                    <img src="/img/underwater-nfc-ui-code.PNG" style="height: 15rem; ">
                   </div>
 
                   <div class="col-md-5 d-flex flex-column flex-1">
                     <div>
                       <p>Technologies involved</p>
                       <div class="icons text-center">
-                        <i class="align-middle devicon-csharp-plain-wordmark"></i>
-                        <img style="height: 2.5em;" class="align-middle" src="/img/nfc.svg">
+                        <i data-toggle="tooltip" title="C Sharp" class="align-middle devicon-csharp-plain-wordmark"></i>
+                        <img style="height: 2.5em;" class="align-middle" data-toggle="tooltip" title="Near-field communication (NFC)" src="/img/nfc.svg">
                       </div>
                     </div>
                     <div>
@@ -351,55 +369,29 @@
           <div class="proj-details">
 
             <div class="container">
-              <div class="proj-header align-right">
+              <div class="proj-header align-left">
                 <p>Smart Car Team Tuck Shop</p>
               </div>
-              <div class="content align-right mb-4">
+              <div class="content align-left mb-4">
                 <p>An Embedded Point of Sale System.</p>
               </div>
               <div class="subcontent">
                 <div class="row">
-                  <div class="col-md-7">
-                    <div class="container">
-                      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <img style="width: 75%;" img-responsive src="/img/tuck-board.PNG" alt="First slide">
-                          </div>
-                          <div class="carousel-item">
-                              <p style="padding: 3em;">Placeholder for 3D parts.</p>
-                          </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="col-md-5 d-flex flex-column">
+                  <div class="col-md-5 d-flex flex-column justify-content-between">
                     <div>
                       <p>Technologies involved</p>
                       <div class="icons text-center">
-                        <img style="height: 2.5em;" src="/img/raspberry-pi.svg">
-                        <i class="align-middle devicon-nodejs-plain"></i>
-                        <i class="align-middle devicon-mysql-plain-wordmark"></i>
+                        <img style="height: 2.5em;" data-toggle="tooltip" title="Raspberry Pi" src="/img/raspberry-pi.svg">
+                        <i data-toggle="tooltip" title="NodeJS" class="align-middle devicon-nodejs-plain"></i>
+                        <i data-toggle="tooltip" title="MySQL" class="align-middle devicon-mysql-plain-wordmark"></i>
                         <a class="align-middle" href="https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/ea-series-automotive-m0-plus/ultra-reliable-kea-automotive-microcontrollers-mcus-based-on-arm-cortex-m0-plus-core:KEA"
                           target="_blank" data-toggle="tooltip" title="Details of NXP K60 MCUs">
                           <img style="height: 2.5em;" src="/img/nxp.svg">
                         </a>
-                        <img style="height: 2.5em;" class="align-middle" src="/img/nfc.svg">
-                        <img style="height: 2.5em;" class="align-middle" src="/img/solidworks.svg">
-                        <img style="height: 2.5em;" class="align-middle" src="/img/altium.svg">
+                        <img style="height: 2.5em;" class="align-middle" data-toggle="tooltip" title="Near-field communication (NFC)" src="/img/nfc.svg">
+                        <img style="height: 2.5em;" class="align-middle" data-toggle="tooltip" title="Solidworks" src="/img/solidworks.svg">
+                        <img style="height: 2.5em;" class="align-middle" data-toggle="tooltip" title="Altium Designer" src="/img/altium.svg">
                       </div>
                     </div>
                     <div>
@@ -415,26 +407,134 @@
                     </div>
                   </div>
 
+                  <div class="col-md-7">
+                    <div class="container">
+                      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> -->
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img style="width: 75%;" img-responsive src="/img/tuck-board.PNG" alt="First slide">
+                          </div>
+                          <!-- <div class="carousel-item">
+                              <p style="padding: 3em;">Placeholder for 3D parts.</p>
+                          </div> -->
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
 
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
+
+
+      <div class="section" id="section-procal">
+        <div class="fp-slide" id="section-procal-intro">
+          <div class="intro align-left-bottom d-flex flex-column justify-content-end" style="height: 100%;">
+            <div>
+
+              <div class="header">
+                <p>Procal</p>
+              </div>
+              <div class="content">
+                <p>Programmable Scientific Calculator for Android L+.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fp-slide" id="section-procal-proj-mad" data-anchor="mad">
+          <div class="proj-details">
+
+            <div class="container">
+              <div class="proj-header align-right">
+                <p>HKUST Mobile App Development Competition</p>
+              </div>
+              <div class="content align-right mb-4">
+                <p>The compeition Procal joined.</p>
+              </div>
+              <div class="subcontent">
+                <div class="row">
+                  <div class="col-md-7">
+                    <iframe src='https://hkustconnect-my.sharepoint.com/personal/dcheungaa_connect_ust_hk/_layouts/15/WopiFrame.aspx?sourcedoc={15928eca-ee85-4fad-877e-a86cf4d8ed1d}&action=embedview&wdAr=1.7777777777777777'
+                      width='610px' height='367px' frameborder='0'>This is an embedded
+                      <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by
+                      <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>
+                  </div>
+                  <div class="col-md-5 d-flex flex-column justify-content-between">
+                    <div>
+                      <p>Technologies involved</p>
+                      <div class="icons text-center">
+                        <i data-toggle="tooltip" title="Java" class="align-middle devicon-java-plain-wordmark"></i>
+                        <i data-toggle="tooltip" title="Andriod" class="align-middle devicon-android-plain-wordmark"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <p>References</p>
+                      <div class="icons">
+                        <a href="https://github.com/danvim/procal" target="_blank" data-toggle="tooltip" title="GitHub Project Page: App">
+                          <i class="devicon-github-plain-wordmark"></i>
+                        </a>
+                        <a href="https://github.com/danvim/procalparsing" target="_blank" data-toggle="tooltip" title="GitHub Project Page: Calculator Parser">
+                          <i class="devicon-github-plain-wordmark"></i>
+                        </a>
+                        <a href="https://github.com/ProcalApp" target="_blank" data-toggle="tooltip" title="GitHub Project Page: v2 (Incomplete)">
+                          <i class="devicon-github-plain-wordmark"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <p>Awards</p>
+                      <ul>
+                        <li>
+                          First Runner-up
+                        </li>
+                        <li>
+                          Best UI Award
+                        </li>
+                        <li>
+                          Best Presentation Award
+                        </li>
+                        <li>
+                          Best Poster Award
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="section" id="section2">
         Hello!
       </div>
       <div class="section" id="section-contact">
         <div class="icons">
-          <a href="http://www.fb.me/mcreng" target="_blank">
+          <a href="http://www.fb.me/mcreng" target="_blank" data-toggle="tooltip" title="Facebook">
             <i class="devicon-facebook-plain"></i>
           </a>
-          <a href="http://www.github.com/mcreng" target="_blank">
+          <a href="http://www.github.com/mcreng" target="_blank" data-toggle="tooltip" title="GitHub">
             <i class="devicon-github-plain-wordmark"></i>
           </a>
-          <a href="mailto:hntse@connect.ust.hk" target="_blank">
+          <a href="mailto:hntse@connect.ust.hk" target="_blank" data-toggle="tooltip" title="Email">
             <i class="fas fa-envelope"></i>
           </a>
         </div>

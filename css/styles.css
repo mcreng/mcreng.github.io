@@ -117,14 +117,12 @@ main {
 
 .align-left-bottom {
 	text-align: left;
-	padding: 5%;
-	padding-top: 25%;
+	padding: 5% 5%;
 }
 
 .align-right-bottom {
 	text-align: right;
-	padding: 5%;
-	padding-top: 25%;
+	padding: 5% 5%;
 }
 
 .hint {
