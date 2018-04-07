@@ -27,6 +27,7 @@
   <script src="js/jquery.fullPage.js"></script>
   <script src="js/pdfobject.min.js"></script>
   <script type="text/javascript">
+    var currentSlide = [null, 0, 0, null, null];
     $(document).ready(function () {
       $('#fullpage').fullpage({
         anchors: ['home', 'robotics', 'procal', '3rdPage', 'contact'],
@@ -41,27 +42,36 @@
           } else {
             $("#navbar").removeClass("navbar-shrink");
           }
-          if (nextIndex != 2) {
-            $('#dp-second').find('a.active').removeClass('active');
+          $('#dp-robotics').find('a.active').removeClass('active');
+          $('#dp-procal').find('a.active').removeClass('active');
+          if (nextIndex == 2) {
+            $('#dp-robotics').find('a').eq(currentSlide[1]).addClass('active');
+          } else if (nextIndex == 3) {
+            $('#dp-procal').find('a').eq(currentSlide[2]).addClass('active');
           }
         },
         onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
           if (index == 2) {
-            $('#dp-second').find('a.active').removeClass('active');
-            $('#dp-second').find('a').eq(nextSlideIndex).addClass('active');
+            $('#dp-robotics').find('a.active').removeClass('active');
+            $('#dp-robotics').find('a').eq(nextSlideIndex).addClass('active');
+            currentSlide[1] = nextSlideIndex;
+          } else if (index == 3) {
+            $('#dp-procal').find('a.active').removeClass('active');
+            $('#dp-procal').find('a').eq(nextSlideIndex).addClass('active');
+            currentSlide[2] = nextSlideIndex;
           }
         },
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
           console.log(slideIndex);
           if (index == 2) {
-            $('#dp-second').find('a.active').removeClass('active');
-            $('#dp-second').find('a').eq(slideIndex).addClass('active');
-
-            // still buggy: going into slides does not update navbar
+            $('#dp-robotics').find('a.active').removeClass('active');
+            $('#dp-robotics').find('a').eq(slideIndex).addClass('active');
+          } else if (index == 3) {
+            $('#dp-procal').find('a.active').removeClass('active');
+            $('#dp-procal').find('a').eq(slideIndex).addClass('active');
           }
         },
       });
-
       $('.dropdown-item').on('click', function (e) {
         $(".dropdown-menu").find('a.active').removeClass('active');
         $(this).addClass('active');
@@ -87,7 +97,7 @@
                 Robotics
                 <b class="caret"></b>
               </a>
-              <div id="dp-second" class="dropdown-menu" aria-labelledby="proj-robotics">
+              <div id="dp-robotics" class="dropdown-menu" aria-labelledby="proj-robotics">
                 <a class="dropdown-item" href="#robotics">Intro</a>
                 <a class="dropdown-item" href="#robotics/rdc">Robot Design Contest</a>
                 <a class="dropdown-item" href="#robotics/nxp">NXP Cup</a>
@@ -102,7 +112,7 @@
                 Procal
                 <b class="caret"></b>
               </a>
-              <div id="dp-second" class="dropdown-menu" aria-labelledby="proj-robotics">
+              <div id="dp-procal" class="dropdown-menu" aria-labelledby="proj-robotics">
                 <a class="dropdown-item" href="#procal">Intro</a>
                 <a class="dropdown-item" href="#procal/mad">Competition</a>
               </div>
@@ -121,21 +131,29 @@
     <!-- https://fontawesome.com/icons?d=gallery&s=brands -->
     <!-- http://konpa.github.io/devicon/ -->
     <div id="fullpage">
-      <div class="section" id="section0">
+      <div class="section" id="section-intro">
         <div class="intro align-left-bottom d-flex flex-column justify-content-end" style="height: 100%;">
+            <div id="message">
+                <div style="padding: 5px;">
+                    <div class="alert alert-info">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Note! </strong>This website is still in progress of adding contents!
+                      </div>
+                </div>
+            </div>
           <div>
             <div class="header">
               <p>TSE Ho Nam, Peter</p>
             </div>
             <div class="content">
-              <p>HKUST Computer Science and Mathematics Year 2</p>
+              <p>HKUST BSc Computer Science and Mathematics Year 2</p>
             </div>
             <div class="subcontent" style="padding-bottom: 1em;">
-              <p>Welcome to my project listing website.</p>
+              <p>Welcome to my experience listing website.</p>
               <p>Hover on icons to see more.</p>
             </div>
             <div class="hint">
-              <p>⭣ See my projects below ⭣</p>
+              <p>⭣ See my experiences below ⭣</p>
             </div>
           </div>
         </div>
@@ -529,6 +547,7 @@
         Hello!
       </div>
       <div class="section" id="section-contact">
+        <div class="content mb-4">Find me!</div>
         <div class="row">
           <div class="col-md-3"></div>
           <div class="icons d-flex flex-col justify-content-around col-md-6">
