@@ -218,7 +218,11 @@ main {
 
 #message {
     position: fixed;
-    top: 10vh;
+    top: 4rem;
     left: 0;
     width: 100%;
+}
+
+.card button:hover, .card button:focus {
+	text-decoration: none; 
 }

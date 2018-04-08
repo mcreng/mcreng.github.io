@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Montserrat|IBM+Plex+Serif|Nunito|Quicksand|Rubik|Crimson+Text"
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|IBM+Plex+Serif|Nunito|Quicksand|Rubik|Crimson+Text"
     rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
@@ -26,11 +26,12 @@
     crossorigin="anonymous"></script>
   <script src="js/jquery.fullPage.js"></script>
   <script src="js/pdfobject.min.js"></script>
+  <script src="js/moment.js"></script>
   <script type="text/javascript">
     var currentSlide = [null, 0, 0, null, null];
     $(document).ready(function () {
       $('#fullpage').fullpage({
-        anchors: ['home', 'robotics', 'procal', '3rdPage', 'contact'],
+        anchors: ['home', 'robotics', 'procal', 'teaching', 'contact'],
         sectionsColor: ['#E8EAF6', '#E8EAF6', '#E8EAF6', '#E8EAF6'],
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
@@ -62,7 +63,6 @@
           }
         },
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-          console.log(slideIndex);
           if (index == 2) {
             $('#dp-robotics').find('a.active').removeClass('active');
             $('#dp-robotics').find('a').eq(slideIndex).addClass('active');
@@ -76,7 +76,24 @@
         $(".dropdown-menu").find('a.active').removeClass('active');
         $(this).addClass('active');
       });
+      $('#card-teaching-left').on('show.bs.collapse', function() {
+        if ($(window).width() < 768) {
+        $('#card-teaching-right').find('.collapse.show').collapse('hide');
+        }
+      });
+      $('#card-teaching-right').on('show.bs.collapse', function() {
+        if ($(window).width() < 768) {
+        $('#card-teaching-left').find('.collapse.show').collapse('hide');
+        }
+      });
     });
+    $.ajax({
+      url: 'https://api.github.com/repos/mcreng/mcreng.github.io/commits/master',
+      success: (data) => { 
+        var lastUpdate =  data.commit.message + ' @ ' + moment(data.commit.author.date).format('DD MMM YYYY HH:mm') + '.';
+        $('.last-commit').html(lastUpdate);
+      }
+    })
   </script>
 </head>
 
@@ -107,7 +124,7 @@
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="proj-robotics" href="#robotics" role="button" data-toggle="dropdown" aria-haspopup="true"
+              <a class="nav-link dropdown-toggle" id="proj-procal" href="#robotics" role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 Procal
                 <b class="caret"></b>
@@ -118,7 +135,15 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#3rdPage">Link</a>
+              <a class="nav-link dropdown-toggle" id="proj-teaching" href="#robotics" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Teaching
+                <b class="caret"></b>
+              </a>
+              <div id="dp-procal" class="dropdown-menu" aria-labelledby="proj-robotics">
+                <a class="dropdown-item" href="#teaching">Intro</a>
+                <a class="dropdown-item" href="#teaching/list">List</a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
@@ -133,14 +158,16 @@
     <div id="fullpage">
       <div class="section" id="section-intro">
         <div class="intro align-left-bottom d-flex flex-column justify-content-end" style="height: 100%;">
-            <div id="message">
-                <div style="padding: 5px;">
-                    <div class="alert alert-info">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Note! </strong>This website is still in progress of adding contents!
-                      </div>
-                </div>
+          <div id="message">
+            <div style="padding: 5px;">
+              <div class="alert alert-info">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <!-- <strong>Note! </strong>This website is still in progress of adding contents! -->
+                <strong>Last update: </strong>
+                <span class="last-commit"></span>
+              </div>
             </div>
+          </div>
           <div>
             <div class="header">
               <p>TSE Ho Nam, Peter</p>
@@ -543,8 +570,142 @@
         </div>
       </div>
 
-      <div class="section" id="section2">
-        Hello!
+      <div class="section" id="section-teaching">
+        <div class="fp-slide" id="section-teaching-intro">
+          <div class="intro align-right-bottom d-flex flex-column justify-content-end" style="height: 100%;">
+            <div>
+
+              <div class="header">
+                <p>Teaching</p>
+              </div>
+              <div class="content">
+                <p>As a tutor in my
+                  <a href="//sfxc.edu.hk">secondary school</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fp-slide" id="section-teaching-list" data-anchor="list">
+          <div class="proj-details">
+
+            <div class="container">
+              <div class="proj-header align-left mb-md-4">
+                <p>I taught for...</p>
+              </div>
+              <div class="content align-left mb-md-4">
+                <!-- <p>my teaching experiences</p> -->
+              </div>
+              <div class="subcontent">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div>
+                      <div id="card-teaching-left">
+                        <div class="card">
+                          <div class="card-header" id="card-header-bridging">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-bridging" aria-expanded="true" aria-controls="collapse-bridging">
+                                Pre-S1 Summer Bridging Course (2017)
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapse-bridging" class="collapse" aria-labelledby="card-header-bridging" data-parent="#card-teaching-left">
+                            <div class="card-body">
+                              A bridging course for pre-S1 students. I was a class teacher and mathematics panel head.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-header" id="card-header-m2">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-m2" aria-expanded="true" aria-controls="collapse-m2">
+                                HKDSE F.6 Top Notch M2 Class (2017)
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapse-m2" class="collapse" aria-labelledby="card-header-m2" data-parent="#card-teaching-left">
+                            <div class="card-body">
+                              A final revision M2 class for F.6 students. I was qualified since I attained 5** (the highest level) in M2.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-header" id="card-header-hkoi17">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-hkoi17" aria-expanded="true" aria-controls="collapse-hkoi17">
+                                HKOI Competition Training Class (2017)
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapse-hkoi17" class="collapse" aria-labelledby="card-header-hkoi17" data-parent="#card-teaching-left">
+                            <div class="card-body">
+                              A competition training class for <a href="\\hkoi.org">HKOI</a>. I was qualified since I attained Silver Award in HKOI 2016.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <div class="col-md-6">
+                    <div>
+                      <div id="card-teaching-right">
+                        <div class="card">
+                          <div class="card-header" id="card-header-phy">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-phy" aria-expanded="true" aria-controls="collapse-phy">
+                                HKDSE F.6 Top Notch Physics Class (2018)
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapse-phy" class="collapse" aria-labelledby="card-header-phy" data-parent="#card-teaching-right">
+                            <div class="card-body">
+                                A final revision physics class for F.6 students. I was qualified since I attained 5** (the highest level) in physics.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-header" id="card-header-hkoi18">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-hkoi18" aria-expanded="true" aria-controls="collapse-hkoi18">
+                                HKOI Competition Training Class (2018)
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapse-hkoi18" class="collapse" aria-labelledby="card-header-hkoi18" data-parent="#card-teaching-right">
+                            <div class="card-body">
+                              A competition training class for <a href="\\hkoi.org">HKOI</a>. I was qualified since I attained Silver Award in HKOI 2016.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-header" id="card-header-ssmsc">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-ssmsc" aria-expanded="true" aria-controls="collapse-ssmsc">
+                                PolyU SSMSC Compeition Training Class (2018)
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapse-ssmsc" class="collapse" aria-labelledby="card-header-ssmsc" data-parent="#card-teaching-right">
+                            <div class="card-body">
+                              A competition training class for <a href="\\www6.polyu.edu.hk/fast/ssmsc/">SSMSC</a>.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="section" id="section-contact">
         <div class="content mb-4">Find me!</div>
@@ -564,7 +725,6 @@
           <div class="col-md-3"></div>
         </div>
       </div>
-    </div>
   </main>
 
 </body>
