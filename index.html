@@ -7,13 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>mcreng's Website</title>
-  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117166409-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-117166409-1');
@@ -22,8 +25,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300|IBM+Plex+Serif|Nunito|Quicksand|Rubik|Crimson+Text"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|IBM+Plex+Serif|Nunito|Quicksand|Rubik|Crimson+Text" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="stylesheet" href="css/reset.css">
@@ -98,21 +100,22 @@
         $(".dropdown-menu").find('a.active').removeClass('active');
         $(this).addClass('active');
       });
-      $('#card-teaching-left').on('show.bs.collapse', function() {
+      $('#card-teaching-left').on('show.bs.collapse', function () {
         if ($(window).width() < 768) {
-        $('#card-teaching-right').find('.collapse.show').collapse('hide');
+          $('#card-teaching-right').find('.collapse.show').collapse('hide');
         }
       });
-      $('#card-teaching-right').on('show.bs.collapse', function() {
+      $('#card-teaching-right').on('show.bs.collapse', function () {
         if ($(window).width() < 768) {
-        $('#card-teaching-left').find('.collapse.show').collapse('hide');
+          $('#card-teaching-left').find('.collapse.show').collapse('hide');
         }
       });
     });
     $.ajax({
       url: 'https://api.github.com/repos/mcreng/mcreng.github.io/commits/master',
-      success: (data) => { 
-        var lastUpdate =  data.commit.message + ' @ ' + moment(data.commit.author.date).format('DD MMM YYYY HH:mm') + '.';
+      success: (data) => {
+        var lastUpdate = data.commit.message + ' @ ' + moment(data.commit.author.date).format('DD MMM YYYY HH:mm') +
+          '.';
         $('.last-commit').html(lastUpdate);
       }
     })
@@ -146,8 +149,7 @@
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="proj-procal" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
+              <a class="nav-link dropdown-toggle" id="proj-procal" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Procal
                 <b class="caret"></b>
               </a>
@@ -372,10 +374,15 @@
                   </div>
                   <div class="col-7">
                     <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="/files/KEA128RM.pdf" width="560" height="315">
+                      <!-- <iframe class="embed-responsive-item" src="/files/KEA128RM.pdf" width="560" height="315">
                         This browser does not support PDFs. Please download the PDF to view it:
                         <a href="/files/KEA128RM.pdf">Download PDF</a>
-                      </iframe>
+                      </iframe> -->
+                      <object data='/files/KEA128RM.pdf' type='application/pdf' width="560" height="315">
+                        <span>This browser does not support inline PDFs. <br> Please download the PDF to view it:
+                          <a href="/files/KEA128RM.pdf">Download PDF</a>
+                        </span>
+                      </object>
                     </div>
 
                   </div>
@@ -664,7 +671,8 @@
                           </div>
                           <div id="collapse-hkoi17" class="collapse" aria-labelledby="card-header-hkoi17" data-parent="#card-teaching-left">
                             <div class="card-body">
-                              A competition training class for <a href="\\hkoi.org">HKOI</a>. I was qualified since I attained Silver Award in HKOI 2016.
+                              A competition training class for
+                              <a href="\\hkoi.org">HKOI</a>. I was qualified since I attained Silver Award in HKOI 2016.
                             </div>
                           </div>
                         </div>
@@ -686,7 +694,7 @@
                           </div>
                           <div id="collapse-phy" class="collapse" aria-labelledby="card-header-phy" data-parent="#card-teaching-right">
                             <div class="card-body">
-                                A final revision physics class for F.6 students. I was qualified since I attained 5** (the highest level) in physics.
+                              A final revision physics class for F.6 students. I was qualified since I attained 5** (the highest level) in physics.
                             </div>
                           </div>
                         </div>
@@ -701,7 +709,8 @@
                           </div>
                           <div id="collapse-hkoi18" class="collapse" aria-labelledby="card-header-hkoi18" data-parent="#card-teaching-right">
                             <div class="card-body">
-                              A competition training class for <a href="\\hkoi.org">HKOI</a>. I was qualified since I attained Silver Award in HKOI 2016.
+                              A competition training class for
+                              <a href="\\hkoi.org">HKOI</a>. I was qualified since I attained Silver Award in HKOI 2016.
                             </div>
                           </div>
                         </div>
@@ -716,7 +725,8 @@
                           </div>
                           <div id="collapse-ssmsc" class="collapse" aria-labelledby="card-header-ssmsc" data-parent="#card-teaching-right">
                             <div class="card-body">
-                              A competition training class for <a href="\\www6.polyu.edu.hk/fast/ssmsc/">SSMSC</a>.
+                              A competition training class for
+                              <a href="\\www6.polyu.edu.hk/fast/ssmsc/">SSMSC</a>.
                             </div>
                           </div>
                         </div>
