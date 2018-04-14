@@ -92,7 +92,7 @@ main {
 }
 
 #section-robotics-intro {
-	background: url('../img/smartcar.jpg') no-repeat center top fixed;
+	background: url('../img/smartcar.jpg') no-repeat center top;
 	position: relative;
 	box-shadow: inset 0 0 0 1000px rgba(232, 234, 246, 0.8);
 	margin: 0;
