@@ -121,7 +121,7 @@ main {
 	box-shadow: inset 0 0 0 1000px rgba(232, 234, 246, 0.8);
 	margin: 0;
 	color: rgba(48, 63, 159, 1);
-	background-position: right 10vw top 10vh;
+	background-position: left 15vw top 10vh;
 	/* -webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover; */
