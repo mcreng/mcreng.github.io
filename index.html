@@ -45,7 +45,7 @@
     var currentSlide = [null, 0, 0, 0, null];
     $(document).ready(function () {
       $('#fullpage').fullpage({
-        anchors: ['home', 'robotics', 'procal', 'teaching', 'contact'],
+        anchors: ['home', 'robotics', 'rips', 'procal', 'teaching', 'contact'],
         sectionsColor: ['#E8EAF6', '#E8EAF6', '#E8EAF6', '#E8EAF6'],
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
@@ -58,6 +58,7 @@
             $("#navbar").removeClass("navbar-shrink");
           }
           $('#dp-robotics').find('a.active').removeClass('active');
+          $('#dp-rips').find('a.active').removeClass('active');
           $('#dp-procal').find('a.active').removeClass('active');
           $('#dp-teaching').find('a.active').removeClass('active');
           if (nextIndex == 2) {
@@ -74,13 +75,17 @@
             $('#dp-robotics').find('a').eq(nextSlideIndex).addClass('active');
             currentSlide[1] = nextSlideIndex;
           } else if (index == 3) {
-            $('#dp-procal').find('a.active').removeClass('active');
-            $('#dp-procal').find('a').eq(nextSlideIndex).addClass('active');
+            $('#dp-rips').find('a.active').removeClass('active');
+            $('#dp-rips').find('a').eq(nextSlideIndex).addClass('active');
             currentSlide[2] = nextSlideIndex;
           } else if (index == 4) {
+            $('#dp-procal').find('a.active').removeClass('active');
+            $('#dp-procal').find('a').eq(nextSlideIndex).addClass('active');
+            currentSlide[3] = nextSlideIndex;
+          } else if (index == 5) {
             $('#dp-teaching').find('a.active').removeClass('active');
             $('#dp-teaching').find('a').eq(nextSlideIndex).addClass('active');
-            currentSlide[3] = nextSlideIndex;
+            currentSlide[4] = nextSlideIndex;
           }
         },
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
@@ -149,6 +154,16 @@
               </div>
             </li>
             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="proj-rips" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  RIPS-HK
+                  <b class="caret"></b>
+                </a>
+                <div id="dp-rips" class="dropdown-menu" aria-labelledby="proj-rips">
+                  <a class="dropdown-item" href="#rips">Intro</a>
+                  <a class="dropdown-item" href="#rips/report">Report</a>
+                </div>
+              </li>
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="proj-procal" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Procal
                 <b class="caret"></b>
@@ -186,7 +201,6 @@
             <div style="padding: 5px;">
               <div class="alert alert-info">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <!-- <strong>Note! </strong>This website is still in progress of adding contents! -->
                 <strong>Last update: </strong>
                 <span class="last-commit"></span>
               </div>
@@ -512,6 +526,62 @@
         </div>
       </div>
 
+      <div class="section" id="section-rips">
+        <div class="fp-slide" id="section-rips-intro">
+          <div class="intro align-left-bottom d-flex flex-column justify-content-end" style="height: 100%;">
+            <div>
+
+              <div class="header">
+                <p>RIPS-HK</p>
+              </div>
+              <div class="content">
+                <p>A nine-week summer research program with U.S. students to work on industrial research projects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fp-slide" id="section-procal-proj-mad" data-anchor="report">
+          <div class="proj-details">
+
+            <div class="container">
+              <div class="proj-header align-right mb-md-4">
+                <p>Improvement on Air Ventilation Assessment</p>
+              </div>
+              <div class="content align-right mb-md-4">
+                <p>The topic of the research.</p>
+              </div>
+              <div class="subcontent">
+                <div class="row">
+                  <div class="col-7">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <object data='/files/RIPS-HK2018.pdf' type='application/pdf' width="560" height="315">
+                        <span>This browser does not support inline PDFs. <br> Please download the PDF to view it:
+                          <a href="/files/RIPS-HK2018.pdf">Download PDF</a>
+                        </span>
+                      </object>
+                    </div>
+                  </div>
+                  <div class="col-5 d-flex flex-column justify-content-around">
+                    <div>
+                      <p>References</p>
+                      <div class="icons">
+                        <a href="https://www.math.ust.hk/~rips/ripshk.html" target="_blank" data-toggle="tooltip" title="RIPS-HK Homepage">
+                          <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="https://github.com/sajantanand/AECOM-AVA-Assessment" target="_blank" data-toggle="tooltip" title="GitHub Project Page">
+                          <i class="devicon-github-plain-wordmark"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="section" id="section-procal">
         <div class="fp-slide" id="section-procal-intro">
