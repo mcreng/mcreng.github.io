@@ -7,7 +7,7 @@
     {% assign sort_order = 'pushed_at' %}
   {% endif %}
 
-  {% if site.projects.exclude.archived && site.projects.exclude.forks %}
+  <!-- {% if site.projects.exclude.archived && site.projects.exclude.forks %}
     {% assign filtered_repos = site.github.public_repositories | where:'archived', false | where:'fork', false | sort: sort_order | reverse %}
   {% elsif site.projects.exclude.archived %}
     {% assign filtered_repos = site.github.public_repositories | where:'archived', false | sort: sort_order | reverse %}
@@ -15,7 +15,8 @@
     {% assign filtered_repos = site.github.public_repositories | where:'fork', false | sort: sort_order | reverse %}
   {% else %}
     {% assign filtered_repos = site.github.public_repositories | sort: sort_order | reverse %}
-  {% endif %}
+  {% endif %} -->
+  {%- comment -%} {% assign filtered_repos = site.github.public_repositories | where:'name', 'cs231n' %}
 
   {% for repository in filtered_repos | limit: site.projects.limit %}
     {% unless site.projects.exclude.projects contains repository.name %}
@@ -23,5 +24,10 @@
         {% include repo-card.html %}
       </div>
     {% endunless %}
-  {% endfor %}
+  {% endfor %} {%- endcomment -%}
+
+  {% assign repository = site.github.public_repositories | where:'name', 'cs231n' | first %}
+  <div class="col-12">
+    {% include repo-card.html %}
+  </div>
 </div>
