@@ -91,3 +91,46 @@
 .cards {
   margin-bottom: 0.3em;
 }
+
+.chevron {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.exp-card .card {
+  margin-top: 1rem;
+}
+
+svg.hide {
+  height: 0;
+  width: 0;
+}
+
+.course-card {
+  // max-width: 17em;
+  // margin: 0.5em;
+  // padding: 0.5em;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #666;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.course-card-footer {
+  margin-top: 0.25em;
+  padding-top: 0.25em;
+  border-top: 1px solid #ccc;
+  font-size: 0.8em;
+  justify-content: space-between;
+}
+
+.course-card span.badge {
+  margin-top: auto;
+  margin-bottom: auto;
+}

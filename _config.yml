@@ -20,15 +20,73 @@ include:
 
 education:
   - title: Hong Kong University of Science and Technology
-    content: Bachelor of Science in Computer Science and Technology
-    date: 2016 - 2020
+    content: Bachelor of Science in Computer Science and Mathematics
+    date: Sep 2016 - Jun 2020
     location: Hong Kong
     icon: ust-icon.png
+    expand: hkust-grade
+    courses:
+      - title: Honors Design and Analysis of Algorithms
+        code: COMP 3711H
+        grade: A+
+      - title: Honors OOP and Data Structures
+        code: COMP 2012H
+        grade: A+
+      - title: Honors Discrete Mathematics
+        code: COMP 2711H
+        grade: A+
+      - title: Mathematical Analysis
+        code: MATH 2033
+        grade: A
+      - title: Applied Statistics
+        code: MATH 2411
+        grade: A+
+      - title: Probability
+        code: MATH 2421
+        grade: A+
+      - title: Matrix Computation
+        code: MATH 3322
+        grade: A
+      - title: Combinotorial Analysis
+        code: MATH 3343
+        grade: A+
+      - title: Honors Software Engineering
+        code: COMP 3111H
+        grade: A+
+      - title: Deep Learning for Computer Vision
+        code: COMP 4901J
+        grade: A+
+      - title: Machine Learning for Natural Language Processing
+        code: MATH 4824B
+        grade: A+
+      - title: Real Analysis
+        code: MATH 3033
+        grade: A+
+      - title: Data Analytic Tools
+        code: MATH 3332
+        grade: A+
+      - title: Cloud Computing and Big Data Systems
+        code: MATH 4651
+        grade: --
+      - title: Foundations of Computer Vision
+        code: COMP 4901L
+        grade: --
+      - title: Introduction to Advanced Algorithmic Techniques
+        code: COMP 5711
+        grade: --
   - title: ETH Zürich
-    content: Exchange student of Departement Informatik
+    content: Exchange Student of Departement Informatik
     date: Feb 2019 - Aug 2019
     location: Switzerland
     icon: eth-icon.png
+    expand: eth-grade
+    courses:
+      - title: Statistical Learning Theory
+        code: 252-0526-00
+        grade: 5.5
+      - title: Autonomous Mobile Robots
+        code: 151-0854-00
+        grade: 5.75
 
 # projects:
 #   sort_by: pushed
