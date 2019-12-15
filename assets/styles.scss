@@ -62,3 +62,32 @@
 #mainTab {
   margin-bottom: 1em;
 }
+
+.icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.bold {
+  font-weight: 550;
+}
+
+.row.exp-card {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.exp-card p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cards {
+  margin-bottom: 0.3em;
+}

@@ -8,24 +8,39 @@ plugins:
 
 permalink: /:year/:month/:day/:title/
 
-defaults:
-  - scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      layout: "post"
+include:
+  - "_img"
 
-projects:
-  sort_by: pushed
-  # sort_by options:
-  #   - pushed
-  #   - stars
-  limit: 9
-  exclude:
-    archived: false
-    forks: true
-    projects:
-    # - repo-name
+# defaults:
+#   - scope:
+#       path: "" # an empty string here means all files in the project
+#       type: "posts"
+#     values:
+#       layout: "post"
+
+education:
+  - title: Hong Kong University of Science and Technology
+    content: Bachelor of Science in Computer Science and Technology
+    date: 2016 - 2020
+    location: Hong Kong
+    icon: ust-icon.png
+  - title: ETH Zürich
+    content: Exchange student of Departement Informatik
+    date: Feb 2019 - Aug 2019
+    location: Switzerland
+    icon: eth-icon.png
+
+# projects:
+#   sort_by: pushed
+#   # sort_by options:
+#   #   - pushed
+#   #   - stars
+#   limit: 9
+#   exclude:
+#     archived: false
+#     forks: true
+#     projects:
+#     # - repo-name
 
 # social_media:
 # behance: your_username

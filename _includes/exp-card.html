@@ -1,0 +1,19 @@
+<div
+  class="github-component d-flex flex-column flex-justify-between height-full text-left {% if site.style == 'dark' %}box-shadow{% else %}border border-gray-light{% endif %} bg-white rounded-1 p-3"
+>
+  <div class="row exp-card">
+    <div class="col-1">
+      <img src="./_img/{{experience.icon}}" class="icon" />
+    </div>
+    <div class="col-11">
+      <p class="bold">{{experience.title}}</p>
+      <p>{{experience.content}}</p>
+      <p class="text-gray">
+        {{experience.date}}
+      </p>
+      <p class="text-gray">
+        {{experience.location}}
+      </p>
+    </div>
+  </div>
+</div>
