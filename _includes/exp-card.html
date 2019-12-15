@@ -31,7 +31,10 @@
     </div>
     {% endif %}
     <div class="collapse col-12" id="{{experience.expand}}-collapse">
-      <div class="card card-body d-flex flex-column flex-justify-between">
+      <div
+        class="card card-body d-flex flex-column flex-justify-between"
+        id="{{experience.expand}}-collapse-card"
+      >
         <!-- My grades: -->
         {% assign courses=experience.courses | sort: 'code' %} {% assign n_row =
         ((experience.courses | size) -1) | divided_by: 3 %} {% for j in
@@ -49,3 +52,15 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(function() {
+    $("#{{experience.expand}}-collapse").on(
+      "show.bs.collapse hide.bs.collapse",
+      e => {
+        $("#{{experience.expand}}-chevron-up").toggleClass("hide");
+        $("#{{experience.expand}}-chevron-down").toggleClass("hide");
+      }
+    );
+  });
+</script>
