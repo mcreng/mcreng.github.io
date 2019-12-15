@@ -5,7 +5,7 @@
     {% include masthead.html metadata=true %}
   </div>
 
-  <div class="col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 bg-gray-light" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
+  <div class="col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 bg-gray-light" {% if site.style == 'dark' %} style="background-color: #2f363d !important" {% endif %}>
     <div class="mx-auto" style="max-width: 900px;">
       {% unless content == ""  %}
         <div class="f4 {% if site.style == 'dark' %}text-white{% endif %} mb-6">
@@ -13,7 +13,7 @@
         </div>
       {% endunless %}
 
-      {% assign titles = 'Education Projects Interests Thoughts' | split: ' ' %}
+      {% assign titles = 'Experiences Projects Interests Thoughts' | split: ' ' %}
 
       <ul class="nav nav-tabs" id="mainTab" role="tablist">
         {% for title in titles %}
@@ -24,10 +24,10 @@
       </ul>
 
       <div class="tab-content" id="myTabContent">
-        {% for title in titles %}        
-        <div class="tab-pane fade {% if title==titles[0] %} show active {% endif %}" id="{{title|downcase}}" role="tabpanel" aria-labelledby="{{title|downcase}}-tab">
-          {% include {{title | downcase}}.html %}
-        </div>
+        {% for title in titles %}
+          <div class="tab-pane fade {% if title==titles[0] %} show active {% endif %}" id="{{title|downcase}}" role="tabpanel" aria-labelledby="{{title|downcase}}-tab">
+            {% include {{title | downcase}}.html %}
+          </div>
         {% endfor %}
       </div>
     </div>
