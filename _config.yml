@@ -10,6 +10,7 @@ permalink: /:year/:month/:day/:title/
 
 include:
   - "_img"
+  - "_files"
 
 # defaults:
 #   - scope:
@@ -17,6 +18,29 @@ include:
 #       type: "posts"
 #     values:
 #       layout: "post"
+
+experience:
+  - title: Machine Learning Engineer
+    content: Dayta AI · Intern
+    date: Oct 2018 - Feb 2019
+    location: Hong Kong
+    icon: dayta-icon.jpeg
+    expand: dayta-supp
+    supp: <p>I worked on multiple projects involving deep learning and computer vision. The first was to package an existing eye gaze detection model into production, which was planned to help on e-sports training. The second was to develop a model that detects if a person falls. It was based on 3D pose estimation and was planned to be used in nursery homes. I was also involved in other smaller projects on anomaly detection and Chinese paraphrasing.</p>
+  - title: Student Researcher
+    content: Hong Kong University of Science and Technology
+    date: Jun 2018 - Aug 2018
+    location: Hong Kong
+    icon: ust-icon.png
+    expand: hkust-research-supp
+    supp: <p>We conducted an industrial research project sponsored by AECOM, which aimed to improve the existing Hong Kong Air Ventilation Assessment using data-driven approaches. The research report is available <a href="_files/RIPS-HK2018.pdf">here</a> and I was mainly responsible for section 3. We are currently proceeding further with our research and running more experiments, and we hope to publish a paper on this matter soon.</p>
+  - title: Senior Member
+    content: HKUST Robotics Team
+    date: Oct 2016 - Aug 2018
+    location: Hong Kong
+    icon: robo-icon.png
+    expand: robo-supp
+    supp: <p>We participated in a nation-wide autonomous car racing competition and was awarded Third Class Honour. We also trained new members by holding tutorials on topics in robotics and software engineering. We conducted R&D, such as developing new IC and component library and developing new internal software for training/productivity purposes (more details in 'Projects'). We also hosted STEM competitions for primary and secondary students, and provided guidance to them throughout.</p>
 
 education:
   - title: Hong Kong University of Science and Technology
