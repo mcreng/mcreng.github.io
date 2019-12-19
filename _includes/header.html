@@ -16,7 +16,7 @@ xml_escape | truncate: 300 %}
 {% else %}
   {% assign page_title = user.name %}
   {%
-assign meta_description = site.user.bio | strip_html | strip_newlines | xml_escape |
+assign meta_description = site.user.description | strip_html | strip_newlines | xml_escape |
 truncate: 300 %}
 {% endif %}
 

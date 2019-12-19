@@ -18,6 +18,7 @@ user: # Override GitHub metadata
   casual_name: Peter Tse
   name: TSE Ho Nam (Peter)
   bio: "Deep Learning | Robotics | Software Development<br>An engineer with theoretical background."
+  description: "Deep Learning | Robotics | Software Development - An engineer with theoretical background."
   email: hntse@connect.ust.hk
 
 experience:
