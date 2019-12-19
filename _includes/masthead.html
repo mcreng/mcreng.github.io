@@ -5,21 +5,21 @@
     {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
   {% endif %}
 
-  <img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
+  <img src="{{ site.user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
   <h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">
-    {% if user.name %}
-      {{ user.name }}
+    {% if site.user.name %}
+      {{ site.user.name }}
     {% else %}
       {{ user.login }}
     {% endif %}
   </h1>
   <p class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
-    {{ user.bio }}
+    {{ site.user.bio }}
   </p>
 
   {% if include.metadata %}
     <div class="f4 mb-6">
-      {% if user.name %}
+      {% if site.user.name %}
         <div class="{{ metadata_styles }}">
           {% octicon mark-github height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:GitHub %}
           <a href="https://github.com/{{ user.login }}" {% if site.style == 'dark' %} class="text-white" {% endif %}>
@@ -27,11 +27,11 @@
           </a>
         </div>
       {% endif %}
-      {% if site.email %}
+      {% if site.user.email %}
         <div class="{{ metadata_styles }}">
           {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
-          <a href="mailto:{{ site.email }}" {% if site.style == 'dark' %} class="text-white" {% endif %}>
-            {{ site.email }}
+          <a href="mailto:{{ site.user.email }}" {% if site.style == 'dark' %} class="text-white" {% endif %}>
+            {{ site.user.email }}
           </a>
         </div>
       {% endif %}

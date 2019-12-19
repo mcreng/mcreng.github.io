@@ -12,12 +12,11 @@ include:
   - "_img"
   - "_files"
 
-# defaults:
-#   - scope:
-#       path: "" # an empty string here means all files in the project
-#       type: "posts"
-#     values:
-#       layout: "post"
+user: # Override GitHub metadata
+  avatar_url: ./_img/avatar.jpeg
+  name: TSE Ho Nam (Peter)
+  bio: "Deep Learning | Robotics | Software Development<br>An engineer with theoretical background."
+  email: hntse@connect.ust.hk
 
 experience:
   - title: Machine Learning Engineer
@@ -138,8 +137,6 @@ projects:
         url-shortener,
         quick-todo,
       ]
-
-email: hntse@connect.ust.hk
 
 social_media:
   # behance: your_username
