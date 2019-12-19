@@ -1,9 +1,9 @@
 {% if course %}
   <div class="github-component course-card d-flex flex-column flex-justify-between height-full text-left {% if site.style == 'dark' %}box-shadow{% else %}border border-gray-light{% endif %} bg-white rounded-1 p-1">
-    <p style="margin-bottom: 0.5em; font-size: 0.8em;">{{course.title}}</p>
+    <p style="margin-bottom: 0.5em; font-size: 0.8em; font-size: 1em;">{{course.title}}</p>
     <div class="course-card-footer d-flex">
-      <span>{{course.code}}</span>
-      <span class="badge badge-pill badge-info">{{course.grade}}</span>
+      <span style="font-size: 1em">{{course.code}}</span>
+      <span class="badge badge-pill badge-info" style="font-size: 1em">{{course.grade}}</span>
     </div>
   </div>
 {% endif %}
