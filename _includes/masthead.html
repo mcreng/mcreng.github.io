@@ -27,11 +27,11 @@
           </a>
         </div>
       {% endif %}
-      {% if user.email %}
+      {% if site.email %}
         <div class="{{ metadata_styles }}">
           {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
-          <a href="mailto:{{ user.email }}" {% if site.style == 'dark' %} class="text-white" {% endif %}>
-            {{ user.email }}
+          <a href="mailto:{{ site.email }}" {% if site.style == 'dark' %} class="text-white" {% endif %}>
+            {{ site.email }}
           </a>
         </div>
       {% endif %}
@@ -54,9 +54,7 @@
           {% endfor %}
         </div>
       {% endif %}
-      {% if user.hireable %}
-        <span class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2" title="Hire me">Available for hire</span>
-      {% endif %}
+      <span class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2" title="Hire me">Available for hire</span>
     </div>
   {% endif %}
 </div>
