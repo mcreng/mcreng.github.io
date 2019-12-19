@@ -157,13 +157,135 @@ social_media:
   # website: http://your_website_url
   # youtube: your_username
 
-topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+skills:
+  - section: Generic
+    details:
+      - name: Python
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png
+        description: Fluent
+      - name: C++
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png
+        description: Fluent
+      - name: Javascript
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png
+        description: Fluent
+      - name: git
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png
+        description: Fluent
+      - name: Markdown
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png
+        description: Fluent
+      - name: LaTex
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png
+        description: Fluent
+      - name: Ubuntu
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ubuntu/ubuntu.png
+        description: Daily OS
+      - name: MySQL/PostgreSQL
+        image_url: https://cdn4.iconfinder.com/data/icons/flat-pro-database-set-1/32/sql-badge-512.png
+        description: Moderate
 
-  - name: Web design
+  - section: Machine Learning/Data Analytics
+    details:
+      - name: Jupyter
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/jupyter-notebook/jupyter-notebook.png
+        description: Fluent
+      - name: TensorFlow
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png
+        description: Fluent
+      - name: Keras
+        image_url: https://avatars2.githubusercontent.com/u/34455048?s=200&v=4
+        description: Fluent
+      - name: sklearn
+        image_url: https://avatars2.githubusercontent.com/u/365630?s=200&v=4
+        description: Fluent
+      - name: OpenCV
+        image_url: https://avatars1.githubusercontent.com/u/5009934?s=200&v=4
+        description: Fluent
+      - name: NLTK
+        image_url: https://avatars1.githubusercontent.com/u/124114?s=200&v=4
+        description: Fluent
+      - name: NumPy
+        image_url: https://avatars3.githubusercontent.com/u/288276?s=200&v=4
+        description: Fluent
+      - name: Pandas
+        image_url: https://avatars1.githubusercontent.com/u/21206976?s=200&v=4
+        description: Fluent
+      - name: Matplotlib
+        image_url: https://avatars0.githubusercontent.com/u/215947?s=200&v=4
+        description: Fluent
+      - name: PyTorch
+        image_url: https://avatars0.githubusercontent.com/u/21003710?s=200&v=4
+        description: Moderate
+      - name: MATLAB
+        image_url: https://avatars0.githubusercontent.com/u/8590076?s=200&v=4
+        description: Moderate
 
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+  - section: Cloud Computing/Big Data
+    details:
+      - name: Spark
+        image_url: https://www.vectorlogo.zone/logos/apache_spark/apache_spark-icon.svg
+        description: Fluent
+      - name: Hadoop
+        image_url: https://hadoop.apache.org/elephant.png
+        description: Fluent
+      - name: Docker
+        image_url: https://avatars0.githubusercontent.com/u/5429470?s=200&v=4
+        description: Moderate
+      - name: OpenFaaS
+        image_url: https://avatars0.githubusercontent.com/u/27013154?s=200&v=4
+        description: Moderate
+      - name: Kubernetes
+        image_url: https://avatars3.githubusercontent.com/u/13629408?s=200&v=4
+        description: Moderate
+      - name: AWS
+        image_url: https://avatars0.githubusercontent.com/u/2232217?s=200&v=4
+        description: Moderate
+      - name: Azure
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/azure/azure.png
+        description: Moderate
+
+  - section: Web Development
+    details:
+      - name: MongoDB
+        image_url: https://avatars1.githubusercontent.com/u/45120?s=200&v=4
+        description: Moderate
+      - name: ExpressJS
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png
+        description: Moderate
+      - name: ReactJS
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png
+        description: Moderate
+      - name: NodeJS
+        image_url: https://avatars3.githubusercontent.com/u/9950313?s=200&v=4
+        description: Moderate
+      - name: Bootstrap
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png
+        description: Moderate
+      - name: jQuery
+        image_url: https://avatars0.githubusercontent.com/u/70142?s=200&v=4
+        description: Moderate
+      - name: Flask
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flask/flask.png
+        description: Moderate
+      - name: Firebase
+        image_url: https://avatars2.githubusercontent.com/u/1335026?s=200&v=4
+        description: Moderate
+      - name: Heroku
+        image_url: https://avatars3.githubusercontent.com/u/23211?s=200&v=4
+        description: Moderate
+
+  - section: Robotics/Embedded System
+    details:
+      - name: Arduino
+        image_url: https://avatars2.githubusercontent.com/u/379109?s=200&v=4
+        description: Fluent
+      - name: Raspberry Pi
+        image_url: https://avatars2.githubusercontent.com/u/1294177?s=200&v=4
+        description: Fluent
+      - name: NXP K60 & KEA
+        image_url: https://avatars1.githubusercontent.com/u/15616545?s=200&v=4
+        description: Fluent
+      - name: STM32
+        image_url: https://avatars0.githubusercontent.com/u/12180191?s=200&v=4
+        description: Moderate

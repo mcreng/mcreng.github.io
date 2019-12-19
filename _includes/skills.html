@@ -1,0 +1,13 @@
+<div class="d-flex flex-wrap gutter-condensed mb-4 align-items-center">
+
+  {% for skills in site.skills %}
+    <h4 style="width: 100%;" {%if site.style="'dark" %} class="text-white" {% endif %}>{{skills.section}}</h4>
+    {% for skill in skills.details %}
+      <div class="col-6 col-md-12 col-lg-4 col-xl-3 mb-3">
+        {% include skill-card.html %}
+      </div>
+    {% endfor %}
+  {% endfor %}
+
+
+</div>
