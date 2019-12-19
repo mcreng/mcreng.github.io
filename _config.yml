@@ -1,5 +1,6 @@
 layout: sidebar
 style: light
+masthead_style: dark
 
 plugins:
   - jekyll-octicons
