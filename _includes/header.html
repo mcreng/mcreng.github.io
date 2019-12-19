@@ -16,7 +16,7 @@ xml_escape | truncate: 300 %}
 {% else %}
   {% assign page_title = user.name %}
   {%
-assign meta_description = user.bio | strip_html | strip_newlines | xml_escape |
+assign meta_description = site.user.bio | strip_html | strip_newlines | xml_escape |
 truncate: 300 %}
 {% endif %}
 
@@ -26,8 +26,8 @@ truncate: 300 %}
     <meta charset="utf-8"/>
     <title>{{ page_title }}</title>
     <meta name="description" content="{{ meta_description }}"/>
-    <meta property="og:title" content="{{ user.name }}"/>
-    <meta property="og:image" content="{{ user.avatar_url }}"/>
+    <meta property="og:title" content="{{ site.user.casual_name }}"/>
+    <meta property="og:image" content="{{ site.user.avatar_url }}"/>
     <meta property="og:description" content="{{ meta_description }}"/>
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
     <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">

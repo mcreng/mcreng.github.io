@@ -15,6 +15,7 @@ include:
 
 user: # Override GitHub metadata
   avatar_url: ./_img/avatar.jpeg
+  casual_name: Peter Tse
   name: TSE Ho Nam (Peter)
   bio: "Deep Learning | Robotics | Software Development<br>An engineer with theoretical background."
   email: hntse@connect.ust.hk
