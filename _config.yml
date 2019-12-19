@@ -116,11 +116,12 @@ education:
 
 projects:
   - section: Course Projects
-    repos: [
+    repos:
+      [
         cs231n,
         COMP4901K,
         serverless-smart-album,
-        # COMP4901L,
+        COMP4901L,
         stat-learning,
         amr-vrep,
         nlu-nlm,
