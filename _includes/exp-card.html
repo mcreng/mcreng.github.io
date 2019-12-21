@@ -29,20 +29,15 @@
           <!-- List courses -->
           {% assign courses=experience.courses | sort:
         'code' %}
-          {% assign n_row = ((experience.courses | size) -1) |
-        divided_by: 3 %}
-          {% for j in (0..n_row) %}
-            <div class="d-sm-flex flex-wrap gutter-condensed mb-4" style="margin-bottom: 0.5em;">
-              {% for i in (0..2) %}
-                <div class="col-lg-4 col-xs-12">
-                  {% assign index=3 | times: j | plus: i %}
-                  {% assign
-            course=courses[index]%}
-                  {% include course-card.html %}
-                </div>
-              {% endfor %}
-            </div>
-          {% endfor %}
+          <div class="d-sm-flex flex-wrap gutter-condensed mb-4" style="margin-bottom: 0.5em;">
+
+            {% for course in courses %}
+              <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+                {% include course-card.html %}
+              </div>
+            {% endfor %}
+
+          </div>
         {% else if experience.supp %}
           {{experience.supp}}
         {% endif %}
