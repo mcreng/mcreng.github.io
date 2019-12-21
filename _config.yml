@@ -29,21 +29,21 @@ experience:
     location: Hong Kong
     icon: dayta-icon.jpeg
     expand: dayta-supp
-    supp: <p>I worked on multiple projects involving deep learning and computer vision. The first was to package an existing eye gaze detection model into production, which was planned to help on e-sports training. The second was to develop a model that detects if a person falls. It was based on 3D pose estimation and was planned to be used in nursery homes. I was also involved in other smaller projects on anomaly detection and Chinese paraphrasing.</p>
+    supp: <p>I worked on multiple projects involving deep learning and computer vision. The first was to package an existing eye gaze detection model into production, which was planned to help on e-sports training. The second was to develop a model that detects if a person falls. It was based on 3D pose estimation and was planned to be used in nursery homes. I was also involved in other smaller projects on anomaly detection and Chinese paraphrasing.</p><p>Despite taking a lot of theoretical courses in machine learning, I had only done machine projects as in course assignments. Working in Dayta gave me real life problems to solve using the techniques I learnt in class. I also learnt a lot of practical stuff when I interned there, for example on how concurrency works in Python, and how to dockerise a neural model. I also learnt a bit on business operation from the founders and got to exchange ideas with my colleagues, whom some are Masters students. It was a fruitful experience.</p>
   - title: Student Researcher
     content: Hong Kong University of Science and Technology
     date: Jun 2018 - Aug 2018
     location: Hong Kong
     icon: ust-icon.png
     expand: hkust-research-supp
-    supp: <p>We conducted an industrial research project sponsored by AECOM, which aimed to improve the existing Hong Kong Air Ventilation Assessment using data-driven approaches. The research report is available <a href="_files/RIPS-HK2018.pdf">here</a> and I was mainly responsible for section 3. We are currently proceeding further with our research and running more experiments, and we hope to publish a paper on this matter soon.</p>
+    supp: <p>We conducted an industrial research project sponsored by AECOM, which aimed to improve the existing Hong Kong Air Ventilation Assessment using data-driven approaches. The research report is available <a href="_files/RIPS-HK2018.pdf">here</a> and I was mainly responsible for section 3. We are currently proceeding further with our research and running more experiments, and we hope to publish a paper on this matter soon.</p><p>This is my first time conducting a proper research. It was kind of stressful to brainstorm new ideas to solve the problem, especially in the limited time of 2 months, but it was a lot of fun. Some of my partners were from the U.S. and we were able to exchange on ideas, knowledge and even culture. We even had a Macau trip together and that was very memorable.</p>
   - title: Senior Member
     content: HKUST Robotics Team
     date: Oct 2016 - Aug 2018
     location: Hong Kong
     icon: robo-icon.png
     expand: robo-supp
-    supp: <p>We participated in a nation-wide autonomous car racing competition and was awarded Third Class Honour. We also trained new members by holding tutorials on topics in robotics and software engineering. We conducted R&D, such as developing new IC and component library and developing new internal software for training/productivity purposes (more details in 'Projects'). We also hosted STEM competitions for primary and secondary students, and provided guidance to them throughout.</p>
+    supp: <p>We participated in a nation-wide autonomous car racing competition and was awarded Third Class Honour. We also trained new members by holding tutorials on topics in robotics and software engineering. We conducted R&D, such as developing new IC and component library and developing new internal software for training/productivity purposes (more details in 'Projects'). We also hosted STEM competitions for primary and secondary students, and provided guidance to them throughout.</p><p>This is easily the most memorable experience in my university life. I learnt a lot throughout this journey. All my basic software engineering skills are picked up here, along with other skills like soldering and 3D parts designing/printing. I also had the privilege to interview and teach new members and it was very fun. Conflicts happened here and there, and while they are not pleasant to deal with, they are important experiences to me. Frankly, I am very grateful that I am able to be a part of the team.</p>
 
 education:
   - title: Hong Kong University of Science and Technology
