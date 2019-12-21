@@ -1,17 +1,9 @@
 <div class="sticky-top px-4 px-md-6 px-lg-7 py-6" id="masthead">
-  {% if site.layout == 'stacked' %}
-    {% assign metadata_styles = 'd-md-inline-block mx-3 mb-1 mb-md-0' %}
-  {% else %}
-    {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
-  {% endif %}
+  {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
 
   <img src="{{ site.user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
   <h2 class="{% if site.masthead_style == 'dark' %}text-white{% endif %} mb-2 lh-condensed" id="textUsername">
-    {% if site.user.name %}
-      {{ site.user.name }}
-    {% else %}
-      {{ user.login }}
-    {% endif %}
+    {{ site.user.name }}
   </h2>
   <p class="mb-3 f4 {% if site.masthead_style == 'dark' %}text-white{% else %}text-gray{% endif %}" id="textBio">
     {{ site.user.bio }}
@@ -42,7 +34,7 @@
         </div>
       {% endif %}
       {% if site.social_media %}
-        <div class="d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
+        <div class="d-flex flex-wrap flex-items-start">
           {% for account in site.social_media %}
             <div class="{% unless forloop.last == true %}mr-3{% endunless %} mb-3">
               {% assign service_shortname = account[0] %}
@@ -60,5 +52,6 @@
 </div>
 
 <script>
+  // fits name in one line
   $("#textUsername").fitText();
 </script>

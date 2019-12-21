@@ -15,7 +15,7 @@
 
       {% assign titles = 'Experiences Projects Skills' | split: ' ' %}
 
-      <ul class="nav nav-tabs" {% if site.style == 'dark' %} style="border-bottom-color: #2f363d !important;" {% endif %} id="mainTab" role="tablist">
+      <ul class="nav nav-tabs" style="margin-bottom: 0.5em;" {% if site.style == 'dark' %} style="border-bottom-color: #2f363d !important;" {% endif %} id="mainTab" role="tablist">
         {% for title in titles %}
           <li class="nav-item">
             <a class="nav-link {% if title==titles[0] %} active {% endif %}" id="{{ title | downcase }}-tab" data-toggle="tab" href="#{{title | downcase}}" role="tab" aria-controls="overview" aria-selected="false">{{title}}</a>

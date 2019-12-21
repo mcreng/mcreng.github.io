@@ -2,7 +2,6 @@
 ---
 
 @import url("https://unpkg.com/primer/build/build.css");
-@import "highlight-syntax";
 
 // If a user adds a custom font, this component will stop it from bleeding into GitHub components:
 .github-component {
@@ -65,10 +64,6 @@
   min-height: 100vh;
 }
 
-#mainTab {
-  margin-bottom: 0.5em;
-}
-
 .icon {
   position: absolute;
   top: 0;
@@ -80,24 +75,6 @@
   max-height: 80%;
 }
 
-.bold {
-  font-weight: 550;
-}
-
-.row.exp-card {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.exp-card p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.cards {
-  margin-bottom: 0.3em;
-}
-
 .chevron {
   position: absolute;
   left: 0;
@@ -107,23 +84,15 @@
   max-height: 80%;
 }
 
-.exp-card .card {
-  margin-top: 1rem;
-}
-
 svg.hide {
   height: 0;
   width: 0;
 }
 
 .course-card {
-  // max-width: 17em;
-  // margin: 0.5em;
-  // padding: 0.5em;
   border-radius: 2px;
   background-color: #fff;
   color: #666;
-  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   align-items: stretch;
 }
