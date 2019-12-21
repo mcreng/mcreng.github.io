@@ -12,6 +12,7 @@ permalink: /:year/:month/:day/:title/
 include:
   - "_img"
   - "_files"
+  - "_scripts"
 
 user: # Override GitHub metadata
   avatar_url: ./_img/avatar.jpeg
@@ -109,10 +110,10 @@ education:
     courses:
       - title: Statistical Learning Theory
         code: 252-0526-00
-        grade: 5.5
+        grade: 5.5/6
       - title: Autonomous Mobile Robots
         code: 151-0854-00
-        grade: 5.75
+        grade: 5.75/6
 
 projects:
   - section: Course Projects
@@ -184,9 +185,6 @@ skills:
       - name: Ubuntu
         image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ubuntu/ubuntu.png
         description: Daily OS
-      - name: MySQL/PostgreSQL
-        image_url: https://cdn4.iconfinder.com/data/icons/flat-pro-database-set-1/32/sql-badge-512.png
-        description: Moderate
 
   - section: Machine Learning/Data Analytics
     details:
@@ -219,6 +217,9 @@ skills:
         description: Fluent
       - name: PyTorch
         image_url: https://avatars0.githubusercontent.com/u/21003710?s=200&v=4
+        description: Moderate
+      - name: SQL
+        image_url: https://cdn4.iconfinder.com/data/icons/flat-pro-database-set-1/32/sql-badge-512.png
         description: Moderate
       - name: MATLAB
         image_url: https://avatars0.githubusercontent.com/u/8590076?s=200&v=4
@@ -270,6 +271,9 @@ skills:
         description: Moderate
       - name: Flask
         image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flask/flask.png
+        description: Moderate
+      - name: Redis
+        image_url: https://cdn.worldvectorlogo.com/logos/redis.svg
         description: Moderate
       - name: Firebase
         image_url: https://avatars2.githubusercontent.com/u/1335026?s=200&v=4
