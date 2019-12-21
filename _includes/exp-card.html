@@ -29,10 +29,10 @@
           <!-- List courses -->
           {% assign courses=experience.courses | sort:
         'code' %}
-          <div class="d-sm-flex flex-wrap gutter-condensed mb-4" style="margin-bottom: 0.5em;">
+          <div class="d-sm-flex flex-wrap gutter-condensed">
 
             {% for course in courses %}
-              <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+              <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mt-1 mb-1">
                 {% include course-card.html %}
               </div>
             {% endfor %}
