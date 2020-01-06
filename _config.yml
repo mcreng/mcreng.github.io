@@ -94,13 +94,13 @@ education:
         grade: A+
       - title: Cloud Computing and Big Data Systems
         code: MATH 4651
-        grade: --
+        grade: A+
       - title: Foundations of Computer Vision
         code: COMP 4901L
-        grade: --
+        grade: A+
       - title: Introduction to Advanced Algorithmic Techniques
         code: COMP 5711
-        grade: --
+        grade: A+
   - title: ETH Zürich
     content: Exchange Student in Departement Informatik
     date: Feb 2019 - Aug 2019
