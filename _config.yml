@@ -53,14 +53,44 @@ education:
     icon: ust-icon.png
     expand: hkust-grade
     courses:
-      - title: Honors Design and Analysis of Algorithms
-        code: COMP 3711H
+      - title: Introduction to Computer Science
+        code: COMP 1021
         grade: A+
       - title: Honors OOP and Data Structures
         code: COMP 2012H
         grade: A+
+      - title: Computer Organization
+        code: COMP 2611
+        grade: A
       - title: Honors Discrete Mathematics
         code: COMP 2711H
+        grade: A+
+      - title: Honors Software Engineering
+        code: COMP 3111H
+        grade: A+
+      - title: Deep Learning for Computer Vision
+        code: COMP 4901J
+        grade: A+
+      - title: Cloud Computing and Big Data Systems
+        code: COMP 4651
+        grade: A+
+      - title: Foundations of Computer Vision
+        code: COMP 4901L
+        grade: A+
+      - title: Introduction to Advanced Algorithmic Techniques
+        code: COMP 5711
+        grade: A+
+      - title: Calculus IB
+        code: MATH 1013
+        grade: A
+      - title: Calculus II
+        code: MATH 1014
+        grade: A+
+      - title: Matrix Algebra and Applications
+        code: MATH 2111
+        grade: A+
+      - title: Multivariable Calculus
+        code: MATH 2023
         grade: A+
       - title: Mathematical Analysis
         code: MATH 2033
@@ -71,36 +101,25 @@ education:
       - title: Probability
         code: MATH 2421
         grade: A+
+      - title: Real Analysis
+        code: MATH 3033
+        grade: A+
+      - title: Abstract Algebra
+        code: MATH 3121
+        grade: A+
       - title: Matrix Computation
         code: MATH 3322
         grade: A
-      - title: Combinotorial Analysis
+      - title: Data Analytic Tools
+        code: MATH 3332
+        grade: A+
+      - title: Combinatorial Analysis
         code: MATH 3343
-        grade: A+
-      - title: Honors Software Engineering
-        code: COMP 3111H
-        grade: A+
-      - title: Deep Learning for Computer Vision
-        code: COMP 4901J
         grade: A+
       - title: Machine Learning for Natural Language Processing
         code: MATH 4824B
         grade: A+
-      - title: Real Analysis
-        code: MATH 3033
-        grade: A+
-      - title: Data Analytic Tools
-        code: MATH 3332
-        grade: A+
-      - title: Cloud Computing and Big Data Systems
-        code: MATH 4651
-        grade: A+
-      - title: Foundations of Computer Vision
-        code: COMP 4901L
-        grade: A+
-      - title: Introduction to Advanced Algorithmic Techniques
-        code: COMP 5711
-        grade: A+
+
   - title: ETH Zürich
     content: Exchange Student in Departement Informatik
     date: Feb 2019 - Aug 2019
@@ -114,6 +133,9 @@ education:
       - title: Autonomous Mobile Robots
         code: 151-0854-00
         grade: 5.75/6
+      - title: System Software and Distributed Systems
+        code: MOB-001
+        grade: 5.25/6
 
 projects:
   - section: Course Projects
@@ -173,6 +195,9 @@ skills:
       - name: Javascript
         image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png
         description: Fluent
+      - name: Java
+        image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png
+        description: Moderate
       - name: git
         image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png
         description: Fluent
